@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Trademark Search Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React and Express-based application designed to search trademarks. It utilizes a backend server to forward search queries to an external trademark API and displays the results on a web frontend. The application includes features for filtering search results and displaying suggestions.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Search Trademarks**: Enter a trademark query and get search results from the external API.
+- **Filtering**: Filter results based on owners, law firms, attorneys, and status.
+- **Suggestions**: Get search suggestions based on the entered query.
+- **Error Handling**: Display error messages if no results are found or if there is an issue with the search.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Node.js](https://nodejs.org/) (v14 or later)
+- [npm](https://www.npmjs.com/) (v6 or later)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Structure
 
-### `npm run build`
+- **`server/`**: Contains the Express server code.
+  - `server.js`: Sets up the Express server, handles API requests, and forwards them to the external trademark API.
+  
+- **`client/`**: Contains the React frontend code.
+  - `src/`:
+    - `components/Header.js`: The header component that handles search input and error modals.
+    - `components/Main.js`: Main component that integrates the header, sidebar, and trademark list.
+    - `components/Sidebar.js`: Sidebar component for filtering and additional features.
+    - `components/SearchResults.js`: Displays search results and suggestions.
+    - `components/TrademarkList.js`: Lists the trademark results.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Perform a search**: Enter a trademark query in the search input on the frontend and click "Search".
+2. **Filter results**: Use the sidebar to apply filters based on owners, law firms, attorneys, and status.
+3. **View suggestions**: Get search suggestions based on your query.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

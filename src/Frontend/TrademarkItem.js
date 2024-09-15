@@ -18,7 +18,13 @@ const TrademarkItem = ({ item }) => {
     return (
         <tr className="border-b border-gray-200 py-1">
             <td className="align-top px-4 py-2">
-                <p className="font-bold text-base mb-1">{item.mark_identification}</p>
+                {/* Dummy image for trademark */}
+                <img
+                    src="https://via.placeholder.com/80"
+                    alt="Trademark logo"
+                    className="mb-2 w-20 h-20 object-cover"
+                />
+                {/* <p className="font-bold text-base mb-1">{item.mark_identification}</p> */}
             </td>
             <td className="align-top px-4 py-2">
                 <p className="text-gray-600 mb-1">{item.current_owner}</p>
